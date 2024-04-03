@@ -271,18 +271,17 @@ exercicio15 = () => {
 };
 
 exercicio16 = () => {
-  let num1 = document.getElementById("num1").value
-  let resposta = document.getElementById("resultado")
-  let error = document.getElementById("erro")
+  let num1 = document.getElementById("num1").value;
+  let resposta = document.getElementById("resultado");
+  let error = document.getElementById("erro");
   let area = 0;
   if (num1 < 0) {
-      resposta.innerHTML = "";
-      error.innerHTML = "informe um numero positivo"
+    resposta.innerHTML = "";
+    error.innerHTML = "informe um numero positivo";
   } else {
-      
-      area = num1 ** 2 * Math.PI.toFixed(5);
-      error.innerHTML = "";
-      resposta.innerHTML = `A area do ciculo de raio ${num1} é = ${area} `
+    area = num1 ** 2 * Math.PI.toFixed(5);
+    error.innerHTML = "";
+    resposta.innerHTML = `A area do ciculo de raio ${num1} é = ${area} `;
   }
 };
 
@@ -323,6 +322,20 @@ exercicio18 = () => {
   console.log(area);
 };
 
-exercicio19
+exercicio19 = () => {
+  let data = document.getElementById("data").value;
+  let error = document.getElementById("erro");
+  let result = document.getElementById("resultado");
+  let dataNasc = new Date("2007=03-14");
+  let dataAtual = new Date();
+  let diferenca = dataAtual.getTime() - dataNasc.getTime();
+  const idade = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365.25));
+  if (data == "") {
+    error.innerText = `digite uma data valida`;
+  } else {
+    error.innerHTML = "";
+    result.innerText = `A idade é de ${idade}`;
+  }
+};
 
-exercicio20
+exercicio20;
